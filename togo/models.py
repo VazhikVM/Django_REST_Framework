@@ -19,5 +19,9 @@ class ToDo(models.Model):
     creator = models.ForeignKey(UserApp, on_delete=models.PROTECT)
     is_active = models.BooleanField(default=True)
 
+    def delete(self, *args, **kwargs):
+        self.is_active = False
+        self.save()
+
     def __str__(self):
         return self.project
