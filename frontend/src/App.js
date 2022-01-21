@@ -1,16 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 
-import './bootstrap/css/bootstrap.min.css'
-import './bootstrap/css/sticky-footer-navbar.css'
-import Footer from './components/Footer.js'
-import Navbar from './components/Menu.js'
-import UserList from './components/users.js'
-import axios from 'axios'
+import './bootstrap/css/bootstrap.min.css';
+import './bootstrap/css/sticky-footer-navbar.css';
+import Footer from './components/Footer.js';
+import Navbar from './components/Menu.js';
+import UserList from './components/users.js';
+import axios from 'axios';
 
 
-const DOMAIN = 'http://127.0.0.1:8000'
-const get_url = (url) => `${DOMAIN}${url}`
+const DOMAIN = 'http://127.0.0.1:8000';
+const get_url = (url) => `${DOMAIN}${url}`;
 
 
 class App extends React.Component {
@@ -22,7 +22,7 @@ class App extends React.Component {
             ],
             users: []
         }
-    }
+    };
 
     render() {
          return (
@@ -40,7 +40,7 @@ class App extends React.Component {
 
 
             )
-    }
+    };
 
     componentDidMount() {
             axios.get(get_url('/api/users/'))
