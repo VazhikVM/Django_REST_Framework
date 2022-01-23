@@ -10,20 +10,22 @@ const UserItem = ({user}) => {
             <td>{user.email}</td>
         </tr>
     )
-}
+};
 
 const UserList = ({users}) => {
     return (
         <table className="table">
             <tr>
                 <th>Login</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>First_Name</th>
+                <th>Last_Name</th>
                 <th>Email</th>
             </tr>
             {users.map((user) => <UserItem user={user} />)}
         </table>
     )
-}
+};
+
+
 
 export default UserList;
